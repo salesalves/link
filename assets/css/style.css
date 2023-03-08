@@ -67,11 +67,11 @@ body {
   left: 0;
   transform: translateY(-50%);
   top: 50%;
+  animation: slide-back 0.4s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.5s forwards;
 }
 #switch span {
   display: block;
@@ -142,5 +142,23 @@ a:active {
 
   .light {
     --bg-url: url(../images/light_desktop.jpg);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
